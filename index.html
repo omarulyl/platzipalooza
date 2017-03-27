@@ -47,19 +47,21 @@
 
     <!-- Menu -->
     <section id="menu-container">
-      <ul class="menu dropdown align-spaced" data-dropdown-menu>
-        <li><a href="#"><!-- <i class="fi-ticket"> --></i>Tickets</a></li>
-        <li>
-          <a href="#">Lineup</a>
-          <ul id="submenu-container" class="menu">
-            <li><a href="#">Viernes</a></li>
-            <li><a href="#">Sabado</a></li>
-            <li><a href="#">Domingo</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Info</a></li>
-        <li><a href="#">Suscribete</a></li>
-      </ul>
+      <nav data-magellan> <!-- atributo data-magellan genera navegacion mejor fluida -->
+        <ul class="menu dropdown align-spaced" data-dropdown-menu>
+          <li><a href="#tickets-container"><!-- <i class="fi-ticket"> --></i>Tickets</a></li>
+          <li>
+            <a href="#lineup-container">Lineup</a>
+            <ul id="submenu-container" class="menu">
+              <li><a href="#">Viernes</a></li>
+              <li><a href="#">Sabado</a></li>
+              <li><a href="#">Domingo</a></li>
+            </ul>
+          </li>
+          <li><a href="#info-container">Info</a></li>
+          <li><a href="#suscribete-container">Suscribete</a></li>
+        </ul>
+      </nav>
     </section>
     <!-- Menu -->
 
@@ -75,7 +77,7 @@
 
     <!-- Lineup -->
 
-    <section id="lineup-container">
+    <section id="lineup-container" data-magellan-target="lineup-container">
       <h3 class="text-center">lineup</h3>
       <ul class="tabs text-center" data-tabs id="lineup-tabs">
         <li class="tabs-title is-active">
@@ -309,7 +311,7 @@
     </section>
     <!-- /Lineup -->
     <!-- Boletos -->
-    <section id="tickets-container">
+    <section id="tickets-container" data-magellan-target="tickets-container">
       <h3 class="text-center">Comprar Boletos</h3>
       <div class="row" data-equalizer data-equalize-on="small"><!-- data-equalizer sirve para igualar las columnas junt con data-equalizer-watch en los li que queremos igualar en las columnas-->
         <div class="column small-10 small-offset-1 medium-6 medium-offset-3">
@@ -353,7 +355,7 @@
     <!-- /Boletos -->
 
     <!-- suscribcion -->
-    <section id="suscribete">
+    <section id="suscribete-container"  data-magellan-target="suscribete-container">
       <h1 class="text-center">Suscríbete</h1>
       <h2 class="text-center"><small>Y recibe las últimas novedades del concierto</small></h2>
       <form action="" method="" novalidate data-abide> <!-- atributo data-abide sirve para validar formularios con foundation -->
@@ -374,7 +376,7 @@
     <!-- suscribcion -->
 
     <!-- informacion -->
-    <section id="info-container">
+    <section id="info-container" data-magellan-target="info-container">
       <h3 class="text-center">Informacion</h3>
       <div class="info-map" data-interchange="[assets/map-small.html, small], [assets/map.html, medium]"></div>
     </section>
