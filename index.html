@@ -46,22 +46,24 @@
     <!-- /Logo -->
 
     <!-- Menu -->
-    <section id="menu-container">
-      <nav data-magellan> <!-- atributo data-magellan genera navegacion mejor fluida -->
-        <ul class="menu dropdown align-spaced" data-dropdown-menu>
-          <li><a href="#tickets-container"><!-- <i class="fi-ticket"> --></i>Tickets</a></li>
-          <li>
-            <a href="#lineup-container">Lineup</a>
-            <ul id="submenu-container" class="menu">
-              <li><a href="#">Viernes</a></li>
-              <li><a href="#">Sabado</a></li>
-              <li><a href="#">Domingo</a></li>
-            </ul>
-          </li>
-          <li><a href="#info-container">Info</a></li>
-          <li><a href="#suscribete-container">Suscribete</a></li>
-        </ul>
-      </nav>
+    <section data-sticky-container id="scrollSticky">
+      <div class="data-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="scrollSticky">
+        <nav id="menu-container" data-magellan> <!-- atributo data-magellan genera navegacion mejor fluida -->
+          <ul class="menu dropdown align-spaced" data-dropdown-menu>
+            <li><a href="#tickets-container"><!-- <i class="fi-ticket"> --></i>Tickets</a></li>
+            <li>
+              <a href="#lineup-container">Lineup</a>
+              <ul id="submenu-container" class="menu">
+                <li><a href="#">Viernes</a></li>
+                <li><a href="#">Sabado</a></li>
+                <li><a href="#">Domingo</a></li>
+              </ul>
+            </li>
+            <li><a href="#info-container">Info</a></li>
+            <li><a href="#suscribete-container">Suscribete</a></li>
+          </ul>
+        </nav>
+      </div>
     </section>
     <!-- Menu -->
 
