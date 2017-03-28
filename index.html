@@ -47,16 +47,16 @@
 
     <!-- Menu -->
     <section data-sticky-container id="scrollSticky">
-      <div class="data-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="scrollSticky">
+      <div class="data-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="150">
         <nav id="menu-container" data-magellan> <!-- atributo data-magellan genera navegacion mejor fluida -->
           <ul class="menu dropdown align-spaced" data-dropdown-menu>
             <li><a href="#tickets-container"><!-- <i class="fi-ticket"> --></i>Tickets</a></li>
             <li>
               <a href="#lineup-container">Lineup</a>
               <ul id="submenu-container" class="menu">
-                <li><a href="#">Viernes</a></li>
-                <li><a href="#">Sabado</a></li>
-                <li><a href="#">Domingo</a></li>
+                <li><a data-toggle-dia="panelViernes" href="#lineup-container">Viernes</a></li>
+                <li><a data-toggle-dia="panelSabado" href="#lineup-container">Sabado</a></li>
+                <li><a data-toggle-dia="panelDomingo" href="#lineup-container">Domingo</a></li>
               </ul>
             </li>
             <li><a href="#info-container">Info</a></li>
@@ -80,85 +80,74 @@
     <!-- Lineup -->
 
     <section id="lineup-container" data-magellan-target="lineup-container">
-      <h3 class="text-center">lineup</h3>
-      <ul class="tabs text-center" data-tabs id="lineup-tabs">
-        <li class="tabs-title is-active">
-          <a href="#panelViernes">Viernes</a>
-        </li>
-        <li class="tabs-title">
-          <a href="#panelSabado">Sabado</a>
-        </li>
-        <li class="tabs-title">
-          <a href="#panelDomingo">Domingo</a>
-        </li>
-      </ul>
-      <div class="tabs-content" data-tabs-content="lineup-tabs"> <!-- el valor de data-tabs-content tiene que ser el id del ul de navegacion -->
+      <h1 class="text-center">lineup</h1>
+      <!-- Tabs -->
+        <ul class="tabs text-center" data-tabs id="lineup-tabs">
+          <li class="tabs-title is-active">
+            <a href="#panelViernes" aria-selected="true" data-magellan-target="viernes" id="viernes">Viernes</a>
+          </li>
+          <li class="tabs-title">
+            <a href="#panelSabado" data-magellan-target="sabado" id="sabado">Sábado</a>
+          </li>
+          <li class="tabs-title">
+            <a href="#panelDomingo" data-magellan-target="domingo" id="domingo">Domingo</a>
+          </li>
+        </ul>
+
+      <div class="tabs-content" data-tabs-content="lineup-tabs"><!-- el valor de data-tabs-content tiene que ser el id del ul de navegacion -->
         <div class="tabs-panel is-active" id="panelViernes">
           <div class="row">
 
-            
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://i2.mirror.co.uk/incoming/article675034.ece/ALTERNATES/s615/Axl-Rose-and-Slash-of-Guns-N-Roses-perform-live-at-Rock-In-Rio-II-on-January-15-1991.jpg" alt="Gun n' Roses">
-                    <figcaption class="orbit-caption">Guns n' Roses</figcaption>
-                  </div>
+            <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://i2.mirror.co.uk/incoming/article675034.ece/ALTERNATES/s615/Axl-Rose-and-Slash-of-Guns-N-Roses-perform-live-at-Rock-In-Rio-II-on-January-15-1991.jpg" alt="Gun n' Roses">
+                  <figcaption class="orbit-caption">Guns n' Roses</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://i2.mirror.co.uk/incoming/article675034.ece/ALTERNATES/s615/Axl-Rose-and-Slash-of-Guns-N-Roses-perform-live-at-Rock-In-Rio-II-on-January-15-1991.jpg" alt="Gun n' Roses">
-                    <figcaption class="orbit-caption">Guns n' Roses</figcaption>
-                  </div>
+            <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://i2.mirror.co.uk/incoming/article675034.ece/ALTERNATES/s615/Axl-Rose-and-Slash-of-Guns-N-Roses-perform-live-at-Rock-In-Rio-II-on-January-15-1991.jpg" alt="Gun n' Roses">
+                  <figcaption class="orbit-caption">Guns n' Roses</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://i2.mirror.co.uk/incoming/article675034.ece/ALTERNATES/s615/Axl-Rose-and-Slash-of-Guns-N-Roses-perform-live-at-Rock-In-Rio-II-on-January-15-1991.jpg" alt="Gun n' Roses">
-                    <figcaption class="orbit-caption">Guns n' Roses</figcaption>
-                  </div>
+            <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://i2.mirror.co.uk/incoming/article675034.ece/ALTERNATES/s615/Axl-Rose-and-Slash-of-Guns-N-Roses-perform-live-at-Rock-In-Rio-II-on-January-15-1991.jpg" alt="Gun n' Roses">
+                  <figcaption class="orbit-caption">Guns n' Roses</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://i2.mirror.co.uk/incoming/article675034.ece/ALTERNATES/s615/Axl-Rose-and-Slash-of-Guns-N-Roses-perform-live-at-Rock-In-Rio-II-on-January-15-1991.jpg" alt="Gun n' Roses">
-                    <figcaption class="orbit-caption">Guns n' Roses</figcaption>
-                  </div>
+            <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://i2.mirror.co.uk/incoming/article675034.ece/ALTERNATES/s615/Axl-Rose-and-Slash-of-Guns-N-Roses-perform-live-at-Rock-In-Rio-II-on-January-15-1991.jpg" alt="Gun n' Roses">
+                  <figcaption class="orbit-caption">Guns n' Roses</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://i2.mirror.co.uk/incoming/article675034.ece/ALTERNATES/s615/Axl-Rose-and-Slash-of-Guns-N-Roses-perform-live-at-Rock-In-Rio-II-on-January-15-1991.jpg" alt="Gun n' Roses">
-                    <figcaption class="orbit-caption">Guns n' Roses</figcaption>
-                  </div>
+            <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://i2.mirror.co.uk/incoming/article675034.ece/ALTERNATES/s615/Axl-Rose-and-Slash-of-Guns-N-Roses-perform-live-at-Rock-In-Rio-II-on-January-15-1991.jpg" alt="Gun n' Roses">
+                  <figcaption class="orbit-caption">Guns n' Roses</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://i2.mirror.co.uk/incoming/article675034.ece/ALTERNATES/s615/Axl-Rose-and-Slash-of-Guns-N-Roses-perform-live-at-Rock-In-Rio-II-on-January-15-1991.jpg" alt="Gun n' Roses">
-                    <figcaption class="orbit-caption">Guns n' Roses</figcaption>
-                  </div>
+            <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://i2.mirror.co.uk/incoming/article675034.ece/ALTERNATES/s615/Axl-Rose-and-Slash-of-Guns-N-Roses-perform-live-at-Rock-In-Rio-II-on-January-15-1991.jpg" alt="Gun n' Roses">
+                  <figcaption class="orbit-caption">Guns n' Roses</figcaption>
                 </div>
               </div>
             </div>
@@ -169,68 +158,56 @@
         <div class="tabs-panel" id="panelSabado">
           <div class="row">
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://farm6.staticflickr.com/5032/7083479587_20f9cd73cd.jpg" alt="Olograma de Tupac">
-                    <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
-                  </div>
+           <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://farm6.staticflickr.com/5032/7083479587_20f9cd73cd.jpg" alt="Gun n' Roses">
+                  <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://farm6.staticflickr.com/5032/7083479587_20f9cd73cd.jpg" alt="Olograma de Tupac">
-                    <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
-                  </div>
+           <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://farm6.staticflickr.com/5032/7083479587_20f9cd73cd.jpg" alt="Gun n' Roses">
+                  <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://farm6.staticflickr.com/5032/7083479587_20f9cd73cd.jpg" alt="Olograma de Tupac">
-                    <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
-                  </div>
+           <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://farm6.staticflickr.com/5032/7083479587_20f9cd73cd.jpg" alt="Gun n' Roses">
+                  <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://farm6.staticflickr.com/5032/7083479587_20f9cd73cd.jpg" alt="Olograma de Tupac">
-                    <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
-                  </div>
+           <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://farm6.staticflickr.com/5032/7083479587_20f9cd73cd.jpg" alt="Gun n' Roses">
+                  <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://farm6.staticflickr.com/5032/7083479587_20f9cd73cd.jpg" alt="Olograma de Tupac">
-                    <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
-                  </div>
+           <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://farm6.staticflickr.com/5032/7083479587_20f9cd73cd.jpg" alt="Gun n' Roses">
+                  <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://farm6.staticflickr.com/5032/7083479587_20f9cd73cd.jpg" alt="Olograma de Tupac">
-                    <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
-                  </div>
+           <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://farm6.staticflickr.com/5032/7083479587_20f9cd73cd.jpg" alt="Gun n' Roses">
+                  <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
                 </div>
               </div>
             </div>
@@ -241,68 +218,56 @@
         <div class="tabs-panel" id="panelDomingo">
           <div class="row">
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://gritaradio.com/files/2012/06/El-Harag%C3%A1n-y-Cia-Plaza-Condesa-2012-03.jpg" alt="Olograma de Tupac">
-                    <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
-                  </div>
+           <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://gritaradio.com/files/2012/06/El-Harag%C3%A1n-y-Cia-Plaza-Condesa-2012-03.jpg" alt="El haragan y CIA">
+                  <figcaption class="orbit-caption">El haragan y CIA</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://gritaradio.com/files/2012/06/El-Harag%C3%A1n-y-Cia-Plaza-Condesa-2012-03.jpg" alt="Olograma de Tupac">
-                    <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
-                  </div>
+           <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://gritaradio.com/files/2012/06/El-Harag%C3%A1n-y-Cia-Plaza-Condesa-2012-03.jpg" alt="El haragan y CIA">
+                  <figcaption class="orbit-caption">El haragan y CIA</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://gritaradio.com/files/2012/06/El-Harag%C3%A1n-y-Cia-Plaza-Condesa-2012-03.jpg" alt="Olograma de Tupac">
-                    <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
-                  </div>
+           <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://gritaradio.com/files/2012/06/El-Harag%C3%A1n-y-Cia-Plaza-Condesa-2012-03.jpg" alt="El haragan y CIA">
+                  <figcaption class="orbit-caption">El haragan y CIA</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://gritaradio.com/files/2012/06/El-Harag%C3%A1n-y-Cia-Plaza-Condesa-2012-03.jpg" alt="Olograma de Tupac">
-                    <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
-                  </div>
+            <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://gritaradio.com/files/2012/06/El-Harag%C3%A1n-y-Cia-Plaza-Condesa-2012-03.jpg" alt="El haragan y CIA">
+                  <figcaption class="orbit-caption">El haragan y CIA</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://gritaradio.com/files/2012/06/El-Harag%C3%A1n-y-Cia-Plaza-Condesa-2012-03.jpg" alt="Olograma de Tupac">
-                    <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
-                  </div>
+            <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://gritaradio.com/files/2012/06/El-Harag%C3%A1n-y-Cia-Plaza-Condesa-2012-03.jpg" alt="El haragan y CIA">
+                  <figcaption class="orbit-caption">El haragan y CIA</figcaption>
                 </div>
               </div>
             </div>
 
-            <div class="small-12 medium-6 column">
-              <div div class="orbit" data-orbit>
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img class="orbit-image" src="http://gritaradio.com/files/2012/06/El-Harag%C3%A1n-y-Cia-Plaza-Condesa-2012-03.jpg" alt="Olograma de Tupac">
-                    <figcaption class="orbit-caption">Olograma de Tupac</figcaption>
-                  </div>
+           <div class="small-12 medium-6 column" data-orbit>
+              <div class="orbit-container">
+                <div class="orbit-slide">
+                  <img class="orbit-image" src="http://gritaradio.com/files/2012/06/El-Harag%C3%A1n-y-Cia-Plaza-Condesa-2012-03.jpg" alt="El haragan y CIA">
+                  <figcaption class="orbit-caption">El haragan y CIA</figcaption>
                 </div>
               </div>
             </div>
