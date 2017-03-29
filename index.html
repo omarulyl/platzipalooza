@@ -13,69 +13,89 @@
   </head>
   <body>
 
+    <!--  Off Canvas Menu  -->
+      <div class="off-canvas-wrapper">
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper data-force-top="false">
+          <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
 
-    <!-- Social -->
-    <section id="social-container">
-      <div class="row align-center text-center">
-        <div class="small-1 column">
-          <a href="#" target="_blank">
-            <i class="fi-social-facebook"></i>
-          </a>
-        </div>
-        <div class="small-1 column">
-          <a href="#" target="_blank">
-            <i class="fi-social-twitter"></i>
-          </a>
-        </div>
-        <div class="small-1 column">
-          <a href="#" target="_blank">
-            <i class="fi-social-instagram"></i>
-          </a>
-        </div>
-      </div>
-      
-    </section>
-    <!-- /social -->
+            <!-- Close button -->
+            <button class="close-button" aria-label="Close menu" type="button" data-close>
+              <span aria-hidden="true">&times;</span>
+            </button>
 
-    <!-- Logo -->
-    <section id="logo-container">
-      <div class="callout text-center">
-        <h1>Platzipalooza</h1> 
-      </div>
-    </section>
-    <!-- /Logo -->
-
-    <!-- Menu -->
-    <section data-sticky-container id="scrollSticky">
-      <div class="data-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="150">
-        <nav id="menu-container" data-magellan> <!-- atributo data-magellan genera navegacion mejor fluida -->
-          <ul class="menu dropdown align-spaced" data-dropdown-menu>
-            <li><a href="#tickets-container"><!-- <i class="fi-ticket"> --></i>Tickets</a></li>
-            <li>
-              <a href="#lineup-container">Lineup</a>
-              <ul id="submenu-container" class="menu">
-                <li><a data-toggle-dia="panelViernes" href="#lineup-container">Viernes</a></li>
-                <li><a data-toggle-dia="panelSabado" href="#lineup-container">Sabado</a></li>
-                <li><a data-toggle-dia="panelDomingo" href="#lineup-container">Domingo</a></li>
+            <!-- Menu -->
+            <nav data-magellan>
+              <ul class="vertical menu" data-drilldown>
+                <li>
+                  <a href="#tickets-container">Tickets</a>
+                </li>
+                <li>
+                  <a href="#lineup-container">Lineup</a>
+                  <ul class="vertical menu">
+                    <li><a href="#viernes" data-toggle-dia="panelViernes">Viernes</a></li>
+                    <li><a href="#sabado" data-toggle-dia="panelSabado">Sábado</a></li>
+                    <li><a href="#domingo" data-toggle-dia="panelDomingo">Domingo</a></li>
+                  </ul>
+                </li>
+                <li><a href="#info-container">Info</a></li>
+                <li><a href="#suscribete-container">Suscríbete</a></li>
               </ul>
-            </li>
-            <li><a href="#info-container">Info</a></li>
-            <li><a href="#suscribete-container">Suscribete</a></li>
-          </ul>
-        </nav>
-      </div>
-    </section>
-    <!-- Menu -->
+            </nav>
+        </div>
 
-    <!-- Tickets -->
-    <section id="tickets-action">
-      <div class="callout large text-center">
-        <a href="#">
-          <button class="large hollow button">Comprar boletos</button>
-        </a>
-      </div>
-    </section>
-    <!-- /Tickets -->
+        <div class="off-canvas-content" data-off-canvas-content>
+            <!-- Social -->
+          <section id="social-container">
+            <div class="row">
+              <ul class="menu column align-center">
+                <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                <li><a href="#"><i class="fi-social-instagram"></i></a></li>
+              </ul>
+            </div>
+          </section>
+          <!-- /social -->
+          <!-- Logo -->
+          <section id="logo-container">
+            <div class="callout text-center">
+              <h1>Platzipalooza</h1> 
+            </div>
+          </section>
+          <!-- /Logo -->
+
+          <!-- Menu -->
+          <section data-sticky-container id="scrollSticky">
+            <div class="data-sticky" data-sticky id="sticky" data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="150">
+              <nav id="menu-container" data-magellan>
+                <ul class=" menu align-spaced show-for-small-only">
+                  <li><a href="#" data-toggle="offCanvas">Menu</a></li>
+                </ul>
+                <ul class="menu dropdown align-spaced show-for-medium" data-dropdown-menu>
+                  <li><a href="#tickets-container"><!-- <i class="fi-ticket"> --></i>Tickets</a></li>
+                  <li>
+                    <a href="#lineup-container">Lineup</a>
+                    <ul id="submenu-container" class="menu">
+                      <li><a data-toggle-dia="panelViernes" href="#lineup-container">Viernes</a></li>
+                      <li><a data-toggle-dia="panelSabado" href="#lineup-container">Sabado</a></li>
+                      <li><a data-toggle-dia="panelDomingo" href="#lineup-container">Domingo</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#info-container">Info</a></li>
+                  <li><a href="#suscribete-container">Suscribete</a></li>
+                </ul>
+              </nav>
+            </div>
+          </section>
+           <!-- Menu -->
+          <!-- Tickets -->
+          <section id="tickets-action">
+            <div class="callout large text-center">
+              <a href="#">
+                <button class="large hollow button">Comprar boletos</button>
+              </a>
+            </div>
+          </section>
+          <!-- /Tickets -->
 
     <!-- Lineup -->
 
@@ -348,6 +368,16 @@
       <div class="info-map" data-interchange="[assets/map-small.html, small], [assets/map.html, medium]"></div>
     </section>
     <!--/informacion -->
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
