@@ -50,8 +50,8 @@ h1, h2, h3, h4, h5, h6, button, input[type="submit"]{
 }
 
 #tickets-action .callout button{
-	color: white;
 	border: 1px solid white;
+	color: white;
 }
 
 #lineup-container{
@@ -179,4 +179,25 @@ h1, h2, h3, h4, h5, h6, button, input[type="submit"]{
 
 #offCanvas .js-drilldown-back > a::before{
 	border-color: transparent white transparent transparent;
+}
+
+/*.orbit-container {
+  height: 450px;
+  margin-bottom: 1em;
+  position: relative;
+  width: 450px;
+}
+
+.orbit-container .orbit-slide img {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}*/
+
+/* .orbit-slide , .orbit-container  para evitar el bug de orbit */
+.orbit-container {
+    height: auto !important;
+}
+.orbit-slide {
+    max-height: none !important;
 }
